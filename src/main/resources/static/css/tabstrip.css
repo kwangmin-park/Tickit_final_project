@@ -1,0 +1,64 @@
+
+
+#tabstrip-parent,
+#tabstrip {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+#graph-summary-table {
+    background-color: aliceblue;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*.wrapper {*/
+/*    height: 100%;*/
+/*    margin: 20px auto;*/
+/*    padding: 20px 0 0 0;*/
+/*    !*background: url('../content/web/tabstrip/bmw.png') no-repeat center 60px transparent;*!*/
+/*}*/
+/*#tabstrip {*/
+/*    background-color: aliceblue;*/
+/*    !*float: right;*!*/
+/*    !*margin-bottom: 20px;*!*/
+/*}*/
+#tabstrip .k-content
+{
+    background-color: aliceblue;
+    border-width: 0;
+    /*height: 320px;*/
+    /*overflow: auto;*/
+}
+/*div.k-tabstrip*/
+/*{*/
+/*    background: none transparent;*/
+/*    */
+/*}*/
+
+/*.specification {*/
+/*    max-width: 670px;*/
+/*    margin: 10px 0;*/
+/*    padding: 0;*/
+/*}*/
+/*.specification dt, dd {*/
+/*    max-width: 140px;*/
+/*    float: left;*/
+/*    margin: 0;*/
+/*    padding: 5px 0 8px 0;*/
+/*}*/
+/*.specification dt {*/
+/*    clear: left;*/
+/*    width: 100px;*/
+/*    margin-right: 7px;*/
+/*    padding-right: 0;*/
+/*    opacity: 0.7;*/
+/*}*/
+/*.specification:after, .wrapper:after {*/
+/*    content: ".";*/
+/*    display: block;*/
+/*    clear: both;*/
+/*    height: 0;*/
+/*    visibility: hidden;*/
+/*}*/

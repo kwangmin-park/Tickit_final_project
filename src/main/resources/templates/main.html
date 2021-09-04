@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!--    kendo library-->
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.1.330/styles/kendo.default-v2.min.css" />
+    <script src="https://kendo.cdn.telerik.com/2021.1.330/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.330/js/kendo.all.min.js"></script>
+    <title>Tick-It</title>
+
+
+    <title>TickIt!</title>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <!--google font : 을지로주아, 나눔코딩, 노토리산스-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <!-- font awesome: 아이콘 가져오기 용 -->
+    <script src="https://kit.fontawesome.com/5316a0a50e.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Toast JS CSS -->
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Our Custom Js -->
+    <script src="../js/main.js"></script>
+    <script src="../js/tabstrip-common.js"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/postit.css">
+    <link rel="stylesheet" type="text/css" href="../css/tabstrip.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>TickIt</h3>
+                <strong>TickIt</strong> <!-- todo.이미지 로고로 대체 필요 -->
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#" class="menu-item" a-url="tabstrip.html">
+                        <i class="fas fa-pencil-alt"></i>
+                        일정관리
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item" a-url="graph.html">
+                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                        그래프
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item" a-url="memo.html">
+                        <i class="fas fa-copy"></i>
+                        일자별메모
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item" a-url="schedule.html">
+                        <i class="fas fa-calendar"></i>
+                        일자별일정
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+<!--                        <span>Toggle Sidebar</span>-->
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <form id="editable-form" class="editable-form">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <div class="input-group nav-link">
+                                    <a id="tripMenuBar" style="cursor: pointer;"><i class="fas fa-plus"></i></a>
+                                    <a href="#" id="tripName" data-type="text" data-pk="1" class="editable editable-click" data-abc="true" style="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="input-group nav-link">
+                                    <span class="input-group-addon">예산</span>
+                                    <a href="#" id="targetPrice" data-type="text" data-pk="1" class="editable editable-click" data-abc="true" style="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="input-group nav-link">
+                                    <span class="input-group-addon">현재금액</span>
+                                    <a href="#" id="curPrice" data-type="text" data-pk="1" class="editable editable-click" data-abc="true" style="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item active" id="logout">
+                                <a class="nav-link" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </form>
+                </div>
+            </nav>
+            <div id="content-section">
+            </div>
+        </div>
+    </div>
+    <div id="tripListWindow">
+        <ul id="tripListUl" class="list-group">
+        </ul>
+        <div id="btnRegisterTrip" class="cursor">
+            <i class="fas fa-plus fa-4x"></i>
+        </div>
+    </div>
+</body>
+</html>

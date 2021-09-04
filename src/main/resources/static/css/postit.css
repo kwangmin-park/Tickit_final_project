@@ -1,0 +1,416 @@
+/*font-family: 'Poor Story', cursive; 손글씨체*/
+/*font weight는 100 300 500 700 900 있음*/
+
+html {
+    background-color: aliceblue;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+    padding: 0px;
+}
+.postit-body {
+    border-radius: 28px;
+    position: relative;
+    top: 0px;
+    margin : 5px;
+    min-width: 300px;
+    /*block-size: fit-content;*/
+}
+
+.postit-btn {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.postit-plus {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgb(26, 170, 62);
+}
+.postit-exit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 52, 86);
+}
+
+.postit-exit :hover {
+    transform: rotate(90deg);
+}
+
+.postit-title {
+    text-align: center;
+    /*font-family: 'Poor Story', cursive; 손글씨체*/
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+.content {
+    display: inline-block;
+    padding: 20px 25px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+}
+
+.vertical-align {
+    vertical-align: top;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+.ticket-header{
+    padding-left:25px;
+    padding-top:5px;
+    height: 30px;
+    background-color: rgb(255, 203, 28);
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    margin-bottom: 10px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ticket-body {
+    display: inline-block;
+    min-width: 500px;
+    margin: 5px;
+    position: relative;
+    padding:0px;
+}
+
+.ticket-content{
+    padding:5px 22px;
+}
+
+.ticket-date {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+    font-size:1.6rem;
+}
+
+.ticket-nickname {
+    display: inline-block;
+    margin: 0px;
+    background-color: antiquewhite;
+    position: relative;
+    padding: 5px 10px;
+    font-weight: 300;
+    font-size: 1rem;
+    position: relative;
+    top: -5px;
+}
+
+.combo-content {
+    margin-top: 10px;
+    position: relative;
+}
+
+select {
+    padding: 5px;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: antiquewhite;
+}
+
+.margin-left {
+    margin-left: 70px;
+}
+
+.margin-fit{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.line-decor {
+    margin: 4px -2px;
+    border-top: 1px solid gray;
+}
+
+.airport-name {
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+.airport-arrival {
+    margin-left: 55px;
+}
+
+.ticket-price-container {
+    font-size: 1rem;
+
+    background-color: #ffbb50;
+
+    padding: 5px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 190px;
+}
+
+.ticket-price{
+    width: 80px;
+    text-align: right;
+    position: relative;
+    right: 14px;
+}
+
+.ticket-memo{
+    border-left: 2px dashed #ffc000;
+    height: 70%;
+    overflow: auto;
+
+}
+
+.ticket-main{
+    position: relative;
+    padding: 0px;
+    background-color: #ffe5c0;
+    border-radius: 25px;
+    height: 240px;
+
+
+}
+.ticket-main-content{
+    margin-top: 0px;
+}
+
+.ticket-place-margin{
+    position: relative;
+ }
+.menu-bar{
+    border: 1px solid gray;
+    border-radius: 25px;
+    width: 20%;
+    text-align: center;
+    position: fixed;
+    right:50px;
+}
+
+
+
+.ticket-clicked{
+    background-color: #404040;
+    color: white;}
+
+.ticket-mini-date{
+    color: dimgray;
+}
+
+.ticket-time{
+    color: #464646;
+    font-size: 1.3rem;
+    font-weight: 700;}
+/*티켓 헤더 요소들*/
+
+.header-menu{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+}
+
+.header-title{
+    display: inline-block;
+}
+
+.ticket-header-btn{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+/*티켓 버튼*/
+
+.ticket-modify{
+    color:lightskyblue;
+}
+
+.ticket-del{
+    color:lightcoral;
+}
+
+*:focus {outline:none !important}
+
+.emp-word{
+    font-weight: 700;
+    color: brown;
+    padding: 2px 4px;
+    border-bottom: 1px solid brown;
+    /*background-color: #ffffff69;*/
+}
+
+
+.empty-ticket-body {
+    display: inline-block;
+    min-width: 500px;
+    margin: 5px;
+    position: relative;
+    padding:0px;
+}
+
+.empty-plus-btn{
+    cursor: pointer;
+}
+
+.empty-header{
+    background-color: #ffe17d;
+}
+
+.empty-main{
+    background-color: #ffeed6;
+}
+.empty-plus{
+    color: #bdc0c3;
+    font-size: 6rem;
+    position: absolute;
+    left: 126px;
+    top: 77px;}
+
+.empty-plus :hover{
+    color:#acb6e0;
+}
+/*색깔 커스텀*/
+.main-bg-color{
+    background-color: #ffe5c0;
+}
+
+.main-point-color{
+    background-color: #ffde81;
+
+}
+/*클릭 및 드래그가 안되도록 하는 클래스*/
+.not-clickable{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* 스크롤바 커스텀*/
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{ /*스크롤바 배경색*/
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: cornflowerblue;
+}
+.ticket-body ::-webkit-scrollbar-thumb{ /*스크롤되는 부분 색*/
+    background-color: darkorange;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+.ticketDate{
+    width:150px;
+}
+
+
+
+.width-small{
+    width:80px;
+}
+
+.width-md{
+    width:100px;
+}
+
+.width-lg{
+    width:130px;
+
+}
+.memoContent{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    height: 97%;
+    width: 100%;
+}
+textarea{resize: none}
+
+ .width-accom{
+     width:120px;
+ }
+
+ .align-base{
+     align-items:baseline;
+ }
+
+ .make-inline{
+     display: inline-block;
+ }
+
+ .rest-name{
+     padding-top: 10px;
+ }
+ .menu{
+     background-color: rgba(0,0,0,0);
+     border: none;
+     height: 97%;
+     width: 100%;
+ }
+
+.ticket-form-container{
+    padding:5px 22px;
+}
+
+.ticket-form-date{
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 30%;
+
+}
+.ticket-main input[type="text"]{
+    background-color: rgba(0,0,0,0);
+    border:none;
+}
+
+.ticket-form-alias{
+    background-color: antiquewhite !important;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.depart-row{
+    width:20%;
+    margin-left: 13px;
+
+}
+
+.arrive-row{
+    width:20%;
+    margin-left: 33px;
+
+}
+
+input:invalid {
+    border: 3px solid red;
+}
+
+.ticket-currency{
+    padding: 5px;
+    color: black;
+    width: 40px;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    bottom: 1px;
+    left: 265px;
+}

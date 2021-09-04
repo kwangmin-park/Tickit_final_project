@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="awsfinal.awsfinalproject.dao.UserDAO">
+<!--    4번째 줄: UserDAO와 연결합니다.-->
+
+<!--    6번째 줄: UserDAO 인터페이스의 selectUsers() 메소드를 호출하면 실행할 SELECT문이며, UserDTO형 객체를 파라미터로 받아, UserDTO형 객체를 반환합니다.-->
+
+<!--    9번째 줄 ~ 11번째 줄: 만약 파라미터에 country가 있다면 SQL문에 10번째 줄의 WHERE절을 추가합니다. 이와 같이 상황에 맞추어 질의문이 변경되는 것을 동적 SQL(Dynamic SQL)이라고 합니다.-->
+    <select id="selectUsers" parameterType="awsfinal.awsfinalproject.dto.UserDTO"
+            resultType="awsfinal.awsfinalproject.dto.UserDTO">
+        SELECT `seq`, `name`, `country`
+        FROM lab03
+        <if test='country != null and country != ""'>
+        WHERE `country` = #{country}
+        </if>
+    </select>
+
+</mapper>

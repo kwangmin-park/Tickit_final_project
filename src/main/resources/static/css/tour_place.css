@@ -1,0 +1,20 @@
+
+.empty-ticket-body-tour {
+    display: inline-block;
+    min-width: 500px;
+    margin: 5px;
+    position: relative;
+    padding:0px;
+}
+
+.empty-plus-btn-tour{
+    cursor: pointer;
+}
+
+.ticket-modify-tour{
+    color:lightskyblue;
+}
+
+.ticket-del-tour{
+    color:lightcoral;
+}

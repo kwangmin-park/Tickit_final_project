@@ -1,0 +1,20 @@
+
+.empty-ticket-body-accommodation {
+    display: inline-block;
+    min-width: 500px;
+    margin: 5px;
+    position: relative;
+    padding:0px;
+}
+
+.empty-plus-btn-accomodation{
+    cursor: pointer;
+}
+
+.ticket-modify-accom{
+    color:lightskyblue;
+}
+
+.ticket-del-accom{
+    color:lightcoral;
+}
